@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="logo.svg" type="image/svg+xml">
+
+    <title>Tech Core - خطة الأسعار الشاملة 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .year {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 20px;
+            border-radius: 30px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-right: 5px solid #667eea;
+        }
+
+        .toc h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .toc-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: 0;
+        }
+
+        .section-header h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .section-content {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .subsection {
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            page-break-inside: avoid;
+        }
+
+        .subsection h3 {
+            color: #1e3c72;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .subsection h3::before {
+            content: '▶';
+            color: #667eea;
+            font-size: 0.8em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 15px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e8f0fe;
+            transition: background 0.3s;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-basic { background: #e3f2fd; color: #1976d2; }
+        .badge-pro { background: #f3e5f5; color: #7b1fa2; }
+        .badge-premium { background: #fff3e0; color: #e65100; }
+        .badge-enterprise { background: #e8f5e9; color: #2e7d32; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            padding-right: 25px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .savings {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .footer-section {
+            background: #1e3c72;
+            color: white;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-item h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .payment-steps {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .payment-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .warning-box strong {
+            color: #856404;
+        }
+
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+            .section { page-break-inside: avoid; }
+            .subsection { page-break-inside: avoid; }
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 Tech Core</h1>
+            <div class="subtitle">خطة الأسعار الشاملة للبرمجة والتسويق والتصوير</div>
+            <div class="year">2026</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h2>📋 فهرس الخدمات</h2>
+                <div class="toc-grid">
+                    <div class="toc-item"><strong>القسم الأول:</strong> البرمجة فقط</div>
+                    <div class="toc-item"><strong>القسم الثاني:</strong> التسويق فقط</div>
+                    <div class="toc-item"><strong>القسم الثالث:</strong> التصوير فقط</div>
+                    <div class="toc-item"><strong>القسم الرابع:</strong> برمجة + تسويق</div>
+                    <div class="toc-item"><strong>القسم الخامس:</strong> برمجة + تصوير</div>
+                    <div class="toc-item"><strong>القسم السادس:</strong> تسويق + تصوير</div>
+                    <div class="toc-item"><strong>القسم السابع:</strong> برمجة + تسويق + تصوير</div>
+                </div>
+            </div>
+
+            <!-- Section 1: Programming -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>القسم الأول: البرمجة فقط 💻</h2>
+                </div>
+                <div class="section-content">
+
+                    <!-- Landing Page -->
+                    <div class="subsection">
+                        <h3>Landing Page (صفحة هبوط)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">3,500 ج</td>
+                                    <td>صفحة واحدة، تصميم جاهز، ربط واتساب، سرعة تحميل عالية</td>
+                                    <td>3 أيام</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">6,000 ج</td>
+                                    <td>تصميم مخصص، تكامل Google Analytics، نموذج اتصال متقدم</td>
+                                    <td>5 أيام</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">10,000 ج</td>
+                                    <td>فيديو خلفية، تكامل CRM، تحليلات متقدمة، متعدد اللغات</td>
+                                    <td>7 أيام</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>كل شيء + تصميم UI/UX فريد + copywriting احترافي + SEO كامل</td>
+                                    <td>10 أيام</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Corporate Website -->
+                    <div class="subsection">
+                        <h3>الموقع التعريفي (Corporate Website)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>الصفحات</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">بداية</span></td>
+                                    <td class="price">8,500 ج</td>
+                                    <td>5 صفحات</td>
+                                    <td>لوحة تحكم بسيطة + ربط إيميل + SEO أولي</td>
+                                    <td>7-10 أيام</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>10 صفحات</td>
+                                    <td>+ blog + نظام FAQ + سرعة محسنة</td>
+                                    <td>14 أيام</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td>15 صفحة</td>
+                                    <td>+ متعدد اللغات + CRM + حجوزات + تقارير</td>
+                                    <td>21 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">40,000 ج</td>
+                                    <td>20+ صفحة</td>
+                                    <td>+ 3 لغات + عضويات + دفع + ERP</td>
+                                    <td>30 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">مؤسسي</span></td>
+                                    <td class="price">70,000 ج+</td>
+                                    <td>غير محدود</td>
+                                    <td>نظام مخصص + API + PWA + دعم مخصص</td>
+                                    <td>45-60 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- E-Commerce -->
+                    <div class="subsection">
+                        <h3>المتجر الإلكتروني (E-Commerce)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المنتجات</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">ناشئ</span></td>
+                                    <td class="price">18,000 ج</td>
+                                    <td>حتى 50</td>
+                                    <td>سلة + مفضلة + مخزون + Paymob/Fawry</td>
+                                    <td>15-20 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">35,000 ج</td>
+                                    <td>حتى 200</td>
+                                    <td>+ متعدد بائعين + كوبونات + بوابتين دفع</td>
+                                    <td>25-30 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">60,000 ج</td>
+                                    <td>حتى 500</td>
+                                    <td>+ ولاء عملاء + محاسبة + PWA + 3 بوابات</td>
+                                    <td>40 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">100,000 ج</td>
+                                    <td>غير محدود</td>
+                                    <td>+ تطبيق خفيف + شحن + API موردين</td>
+                                    <td>60 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">منصة</span></td>
+                                    <td class="price">180,000 ج+</td>
+                                    <td>غير محدود</td>
+                                    <td>منصة كاملة + تطبيق + محاسبة متكامل</td>
+                                    <td>90 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- LMS -->
+                    <div class="subsection">
+                        <h3>المنصة التعليمية (LMS)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>الكورسات</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">35,000 ج</td>
+                                    <td>10 / 100 طالب</td>
+                                    <td>حسابات + حماية فيديو + شهادات + اختبارات</td>
+                                    <td>30 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">60,000 ج</td>
+                                    <td>50 / 500 طالب</td>
+                                    <td>+ اشتراكات + منتدى + Zoom مباشر</td>
+                                    <td>45 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">100,000 ج</td>
+                                    <td>غير محدود</td>
+                                    <td>+ تطبيق + محادثة + تحليلات + شركات</td>
+                                    <td>60 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">أكاديمي</span></td>
+                                    <td class="price">180,000 ج+</td>
+                                    <td>غير محدود</td>
+                                    <td>منصة جامعة + حضور وغياب + تكامل حكومي</td>
+                                    <td>90 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Page Break -->
+            <div class="page-break"></div>
+
+            <!-- Mobile Apps -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>تطبيقات الموبايل 📱</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="subsection">
+                        <h3>تطبيق Android فقط</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td>5-7 شاشات، ربط API، رفع Play Store</td>
+                                    <td>30 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">40,000 ج</td>
+                                    <td>10-15 شاشة، Push، GPS، لوحة تحكم</td>
+                                    <td>45 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">65,000 ج</td>
+                                    <td>20+ شاشة، محادثة، دفع، offline</td>
+                                    <td>60 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">90,000 ج+</td>
+                                    <td>كل شيء + تكامل أجهزة + تحليلات</td>
+                                    <td>75 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>تطبيق iOS فقط</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">30,000 ج</td>
+                                    <td>5-7 شاشات، ربط API، رفع App Store</td>
+                                    <td>30 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">50,000 ج</td>
+                                    <td>10-15 شاشة، Push، GPS، Face ID</td>
+                                    <td>45 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">80,000 ج</td>
+                                    <td>20+ شاشة، محادثة، Apple Pay، widgets</td>
+                                    <td>60 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">120,000 ج+</td>
+                                    <td>كل شيء + تكامل Apple كامل</td>
+                                    <td>75 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="warning-box">
+                            <strong>ملاحظة:</strong> حساب Apple Developer ($99/سنة) يدفعه العميل
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>تطبيق كامل (Android + iOS)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المميزات</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">ناشئ</span></td>
+                                    <td class="price">45,000 ج</td>
+                                    <td>5-7 شاشات، ربط API واحد</td>
+                                    <td>45 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">75,000 ج</td>
+                                    <td>10-12 شاشة، Push، GPS، لوحة تحكم</td>
+                                    <td>60 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">120,000 ج</td>
+                                    <td>18-25 شاشة، محادثة، دفع، offline</td>
+                                    <td>75 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">180,000 ج</td>
+                                    <td>30+ شاشة، تحليلات + تكامل أجهزة</td>
+                                    <td>90 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">منصة</span></td>
+                                    <td class="price">280,000 ج+</td>
+                                    <td>تطبيق سوبر + لوحة تحكم + سائقين</td>
+                                    <td>120 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Web + Mobile Bundle</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المحتوى</th>
+                                    <th>المدة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">60,000 ج</td>
+                                    <td>موقع + تطبيقين (بسيط) + لوحة تحكم موحدة</td>
+                                    <td>60-70 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">100,000 ج</td>
+                                    <td>موقع متوسط + تطبيقين متوسطين + مزامنة فورية</td>
+                                    <td>80 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">160,000 ج</td>
+                                    <td>موقع كبير + تطبيقين معقدين + API كامل</td>
+                                    <td>100 يوم</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">مؤسسي</span></td>
+                                    <td class="price">250,000 ج+</td>
+                                    <td>منصة كاملة + BI وتحليلات + دعم 24/7</td>
+                                    <td>120-150 يوم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="highlight-box">
+                            <h4>ما يشمله كل باقة:</h4>
+                            <ul class="features-list">
+                                <li>موقع ويب متجاوب (Responsive)</li>
+                                <li>تطبيق Android (APK + Play Store)</li>
+                                <li>تطبيق iOS (App Store)</li>
+                                <li>لوحة تحكم موحدة (Web Dashboard)</li>
+                                <li>قاعدة بيانات مشتركة + مزامنة فورية</li>
+                                <li>هوية بصرية موحدة</li>
+                                <li>توثيق كامل للنظام</li>
+                                <li>توفير 30% من تكلفة البناء المنفصل</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Page Break -->
+            <div class="page-break"></div>
+
+            <!-- Section 2: Marketing -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>القسم الثاني: التسويق الرقمي فقط 📢</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="subsection">
+                        <h3>إدارة صفحة واحدة (فيسبوك أو إنستجرام)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>الشهري</th>
+                                    <th>المحتوى</th>
+                                    <th>الإعلانات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">بداية</span></td>
+                                    <td class="price">5,000 ج</td>
+                                    <td>12 بوست/ريل + 4 ستوريز + رد كومنتات</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">7,000 ج</td>
+                                    <td>16 بوست/ريل + 8 ستوريز + 2 Reels</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">10,000 ج</td>
+                                    <td>20 بوست/ريل + 12 ستوريز + 4 Reels + فيديو</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>30 بوست/ريل + 20 ستوريز + 8 Reels + 2 فيديوهات</td>
+                                    <td>ميزانية 5,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td>محتوى يومي + Reels يومي + 4 فيديوهات</td>
+                                    <td>ميزانية 10,000 ج</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>إدارة منصتين (فيسبوك + إنستجرام)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>الشهري</th>
+                                    <th>المحتوى</th>
+                                    <th>الإعلانات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">8,000 ج</td>
+                                    <td>20 بوست + 10 ستوريز</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">12,000 ج</td>
+                                    <td>30 بوست + 20 ستوريز + 6 Reels</td>
+                                    <td>ميزانية 5,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">20,000 ج</td>
+                                    <td>50 بوست + 30 ستوريز + 12 Reels</td>
+                                    <td>ميزانية 15,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">شامل</span></td>
+                                    <td class="price">35,000 ج</td>
+                                    <td>محتوى يومي + 6 فيديوهات</td>
+                                    <td>ميزانية 30,000 ج</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>إدارة 3 منصات (+ تيك توك/لينكد إن)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>الشهري</th>
+                                    <th>المحتوى</th>
+                                    <th>الإعلانات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>30 بوست + 20 ستوريز/shorts</td>
+                                    <td>ميزانية 8,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td>50 بوست + 40 ستوريز + 15 فيديو</td>
+                                    <td>ميزانية 20,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">45,000 ج</td>
+                                    <td>محتوى يومي + 25 فيديو + TikTok trends</td>
+                                    <td>ميزانية 40,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">مؤسسي</span></td>
+                                    <td class="price">80,000 ج+</td>
+                                    <td>فريق كامل + محتوى exclusive</td>
+                                    <td>ميزانية 80,000 ج+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>حملات Facebook & Instagram Ads</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>نسبة الإدارة</th>
+                                    <th>الميزانية</th>
+                                    <th>الخدمات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">بداية</span></td>
+                                    <td>30%</td>
+                                    <td>6,000 - 10,000 ج</td>
+                                    <td>2 campaigns + targeting أساسي</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td>25%</td>
+                                    <td>10,000 - 20,000 ج</td>
+                                    <td>4 campaigns + A/B testing</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td>20%</td>
+                                    <td>20,000 - 50,000 ج</td>
+                                    <td>8 campaigns + lookalike + optimization</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td>15%</td>
+                                    <td>50,000 - 100,000 ج</td>
+                                    <td>campaigns غير محدودة + CRO</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">مؤسسي</span></td>
+                                    <td>10%</td>
+                                    <td>100,000 ج+</td>
+                                    <td>فريق مخصص + استراتيجية 360</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="warning-box">
+                            <strong>ملاحظة:</strong> نسبة الإدارة تقل كلما زادت الميزانية. الدفع كاش مقدماً لتمويل الحملة.
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>خدمات SEO</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>الشهري</th>
+                                    <th>السنوي</th>
+                                    <th>الخدمات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">3,000 ج</td>
+                                    <td class="price">30,000 ج</td>
+                                    <td>تحسين تقني + 5 كلمات</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">6,000 ج</td>
+                                    <td class="price">60,000 ج</td>
+                                    <td>15 كلمة + 4 مقالات + 10 باك لينك</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">12,000 ج</td>
+                                    <td class="price">120,000 ج</td>
+                                    <td>30 كلمة + 8 مقالات + 25 باك لينك</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td class="price">250,000 ج</td>
+                                    <td>50 كلمة + 15 مقالة + content strategy</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">مؤسسي</span></td>
+                                    <td class="price">50,000 ج+</td>
+                                    <td class="price">500,000 ج+</td>
+                                    <td>فريق مخصص + 100+ كلمة + PR</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Page Break -->
+            <div class="page-break"></div>
+
+            <!-- Section 3: Photography -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>القسم الثالث: التصوير والإنتاج المرئي 📸</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="subsection">
+                        <h3>تصوير المنتجات</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المخرجات</th>
+                                    <th>التصنيف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">2,000 ج</td>
+                                    <td>10 صور منقحة + خلفية بيضاء</td>
+                                    <td>منتجات بسيطة</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">3,500 ج</td>
+                                    <td>20 صورة + 3 زوايا + خلفيات متنوعة</td>
+                                    <td>منتجات متعددة</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">6,000 ج</td>
+                                    <td>35 صورة + styling + lifestyle</td>
+                                    <td>منتجات فاخرة</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">10,000 ج</td>
+                                    <td>60 صورة + 3 فيديوهات + stop motion</td>
+                                    <td>مجموعة كاملة</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">18,000 ج</td>
+                                    <td>100 صورة + 6 فيديوهات + locación</td>
+                                    <td>كتالوج كامل</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>تصوير الأطعمة (Food Photography)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المخرجات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">2,500 ج</td>
+                                    <td>12 صورة للمنيو</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">5,000 ج</td>
+                                    <td>25 صورة + 3 hero shots</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">9,000 ج</td>
+                                    <td>45 صورة + فيديو + behind the scenes</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">شامل</span></td>
+                                    <td class="price">16,000 ج</td>
+                                    <td>80 صورة + 3 فيديوهات + فريق كامل</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>تصوير الأزياء والموضة</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المخرجات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">3,500 ج</td>
+                                    <td>15 صورة (flat lay + model)</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">7,000 ج</td>
+                                    <td>30 صورة + 2 موديلز</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">14,000 ج</td>
+                                    <td>60 صورة + 4 موديلز + 2 locaciones</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">كامبين</span></td>
+                                    <td class="price">30,000 ج+</td>
+                                    <td>150 صورة + 8 موديلز + فيديو كامل</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>فيديوهات السوشيال ميديا (Reels/TikTok)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>سعر الفيديو</th>
+                                    <th>الباقة الشهرية (8)</th>
+                                    <th>المحتوى</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">800 ج</td>
+                                    <td class="price">6,000 ج</td>
+                                    <td>تصوير بسيط + مونتاج أساسي</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">احترافي</span></td>
+                                    <td class="price">1,500 ج</td>
+                                    <td class="price">11,000 ج</td>
+                                    <td>تصوير متعدد الزوايا + text animation</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">متكامل</span></td>
+                                    <td class="price">2,500 ج</td>
+                                    <td class="price">18,000 ج</td>
+                                    <td>concept كامل + script + مونتاج سينمائي</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">بريميوم</span></td>
+                                    <td class="price">4,000 ج</td>
+                                    <td class="price">28,000 ج</td>
+                                    <td>فريق إنتاج + locations + VFX</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>الفيديوهات الإعلانية (TVC Style)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المدة</th>
+                                    <th>المحتوى</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">قصير</span></td>
+                                    <td class="price">8,000 ج</td>
+                                    <td>15-30 ثانية</td>
+                                    <td>تصوير منتج + مونتاج + VO</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">متوسط</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>30-60 ثانية</td>
+                                    <td>concept + script + تصوير + VO</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">طويل</span></td>
+                                    <td class="price">28,000 ج</td>
+                                    <td>60-90 ثانية</td>
+                                    <td>فريق كامل + locations + talent</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">حملة</span></td>
+                                    <td class="price">50,000 ج+</td>
+                                    <td>3 فيديوهات</td>
+                                    <td>حملة متكاملة + versions مختلفة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Page Break -->
+            <div class="page-break"></div>
+
+            <!-- Combined Packages -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>الباقات المشتركة 💎</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="subsection">
+                        <h3>القسم الرابع: برمجة + تسويق (وفر 15-30%)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الخدمة</th>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Landing Page + تسويق</td>
+                                    <td>أساسي</td>
+                                    <td class="price">10,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">18,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">30,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">موقع تعريفي + تسويق</td>
+                                    <td>بداية</td>
+                                    <td class="price">18,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>نمو</td>
+                                    <td class="price">35,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">65,000 ج</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">120,000 ج</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">متجر إلكتروني + تسويق</td>
+                                    <td>ناشئ</td>
+                                    <td class="price">35,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>نمو</td>
+                                    <td class="price">70,000 ج</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">140,000 ج</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">280,000 ج</td>
+                                    <td><span class="savings">خصم 35%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>القسم الخامس: برمجة + تصوير (وفر 15-30%)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الخدمة</th>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Landing Page + تصوير</td>
+                                    <td>أساسي</td>
+                                    <td class="price">7,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">12,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">22,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">موقع تعريفي + تصوير</td>
+                                    <td>أساسي</td>
+                                    <td class="price">14,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">28,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">55,000 ج</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">متجر إلكتروني + تصوير</td>
+                                    <td>ناشئ</td>
+                                    <td class="price">28,000 ج</td>
+                                    <td><span class="savings">خصم 15%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>نمو</td>
+                                    <td class="price">55,000 ج</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>احترافي</td>
+                                    <td class="price">100,000 ج</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>متكامل</td>
+                                    <td class="price">180,000 ج</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Page Break -->
+            <div class="page-break"></div>
+
+            <!-- Full Packages -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>القسم السابع: الباقات الشاملة (برمجة + تسويق + تصوير) 👑</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="subsection">
+                        <h3>Landing Page + تسويق + تصوير</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المحتوى</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">بداية</span></td>
+                                    <td class="price">15,000 ج</td>
+                                    <td>Landing Page أساسي + إدارة شهر + تصوير أساسي</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">28,000 ج</td>
+                                    <td>Landing Page احترافي + إدارة شهرين + تصوير نمو</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">50,000 ج</td>
+                                    <td>Landing Page متكامل + إدارة 3 شهور + SEO + تصوير احترافي</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>موقع تعريفي + تسويق + تصوير</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المحتوى</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">أساسي</span></td>
+                                    <td class="price">25,000 ج</td>
+                                    <td>موقع 5 صفحات + إدارة شهرين + تصوير مقر</td>
+                                    <td><span class="savings">خصم 20%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">55,000 ج</td>
+                                    <td>موقع 10 صفحات + إدارة 4 شهور + SEO + تصوير</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">110,000 ج</td>
+                                    <td>موقع 15 صفحة + إدارة 6 شهور + SEO + حملات + تصوير متكامل</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">220,000 ج</td>
+                                    <td>موقع متكامل + تسويق 6 شهور + SEO + حملات + تصوير شامل</td>
+                                    <td><span class="savings">خصم 35%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>متجر إلكتروني + تسويق + تصوير 🏆</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المحتوى</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-basic">ناشئ</span></td>
+                                    <td class="price">50,000 ج</td>
+                                    <td>متجر ناشئ + إدارة 3 شهور + SEO + تصوير 20 منتج</td>
+                                    <td><span class="savings">خصم 25%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-pro">نمو</span></td>
+                                    <td class="price">110,000 ج</td>
+                                    <td>متجر نمو + إدارة 6 شهور + SEO + Google Ads + تصوير 35 منتج</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">احترافي</span></td>
+                                    <td class="price">220,000 ج</td>
+                                    <td>متجر احترافي + تسويق 6 شهور + SEO + حملات + email + تصوير 60 منتج</td>
+                                    <td><span class="savings">خصم 35%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">متكامل</span></td>
+                                    <td class="price">450,000 ج</td>
+                                    <td>متجر متكامل + تسويق سنة + SEO + حملات 150k + content + تصوير 100 منتج</td>
+                                    <td><span class="savings">خصم 40%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Web + Mobile Bundle + تسويق + تصوير 👑</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الباقة</th>
+                                    <th>السعر</th>
+                                    <th>المحتوى</th>
+                                    <th>الوفر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge badge-pro">الذهبية</span></td>
+                                    <td class="price">120,000 ج</td>
+                                    <td>Bundle أساسي + إدارة 3 شهور + SEO + حملة + تصوير مقر</td>
+                                    <td><span class="savings">خصم 30%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-premium">البلاتينية</span></td>
+                                    <td class="price">250,000 ج</td>
+                                    <td>Bundle احترافي + تسويق 6 شهور + SEO + حملات + content + تصوير شامل</td>
+                                    <td><span class="savings">خصم 35%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">الماسية</span></td>
+                                    <td class="price">500,000 ج</td>
+                                    <td>Bundle متكامل + تسويق سنة + SEO + حملات 150k + email + تصوير بريميوم</td>
+                                    <td><span class="savings">خصم 40%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge badge-enterprise">المؤسسية</span></td>
+                                    <td class="price">1,000,000 ج+</td>
+                                    <td>Bundle مؤسسي + تسويق سنة بفريق مخصص + SEO مؤسسي + حملات 400k + إنتاج ضخم</td>
+                                    <td><span class="savings">خصم 45%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h4>📊 ملخص وفورات الباقات المشتركة</h4>
+                        <table style="margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>عدد الخدمات</th>
+                                    <th>نسبة الخصم</th>
+                                    <th>مثال على التوفير</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>خدمتين</td>
+                                    <td>15% - 25%</td>
+                                    <td>وفر 10,000 - 50,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td>ثلاث خدمات (شامل)</td>
+                                    <td>25% - 40%</td>
+                                    <td>وفر 50,000 - 400,000 ج</td>
+                                </tr>
+                                <tr>
+                                    <td>عقود سنوية</td>
+                                    <td>+5% إضافي</td>
+                                    <td>خصم إجمالي يصل 45%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-section">
+                <div class="footer-grid">
+                    <div class="footer-item">
+                        <h3>💳 نظام الدفع</h3>
+                        <div class="payment-steps">
+                            <div class="payment-step">
+                                <div class="step-number">1</div>
+                                <div>عقد + تصميم: 30%</div>
+                            </div>
+                            <div class="payment-step">
+                                <div class="step-number">2</div>
+                                <div>التطوير/التنفيذ: 40%</div>
+                            </div>
+                            <div class="payment-step">
+                                <div class="step-number">3</div>
+                                <div>التسليم النهائي: 20%</div>
+                            </div>
+                            <div class="payment-step">
+                                <div class="step-number">4</div>
+                                <div>بعد الضمان (30 يوم): 10%</div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 0.9em;">للخدمات الشهرية: 50% مقدم + 50% بعد أسبوعين</p>
+                    </div>
+
+                    <div class="footer-item">
+                        <h3>🛡️ الضمانات</h3>
+                        <ul style="list-style: none; line-height: 2;">
+                            <li>✓ ضمان تقني 30 يوم ضد الأخطاء</li>
+                            <li>✓ تعديلات مجانية (3 مرات)</li>
+                            <li>✓ فيديو شرح أو meeting تدريبي</li>
+                            <li>✓ ملكية كاملة للكود والحسابات</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item">
+                        <h3>⚠️ ملاحظات هامة</h3>
+                        <ul style="list-style: none; line-height: 2; font-size: 0.9em;">
+                            <li>• الأسعار لا تشمل رسوم App Store/Google Play</li>
+                            <li>• ميزانيات الإعلانات تدفع مباشرة للمنصات</li>
+                            <li>• يمكن تخصيص أي باقة حسب الاحتياج</li>
+                            <li>• عقود >6 أشهر: تفاوض على السعر</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h3 style="color: #ffd700; margin-bottom: 20px;">📞 تواصل معنا</h3>
+                    <p style="font-size: 1.2em; margin-bottom: 10px;"><strong>Tech Core</strong></p>
+                    <p><a href="https://tech-core-one.vercel.app/" target="_blank" style="text-decoration: none; color: inherit;">🌐 tech-core-one.vercel.app</a></p>
+                    <p><a href="https://www.facebook.com/profile.php?id=61588661400997" target="_blank" style="text-decoration: none; color: inherit;">📘 fb.com/techcore</a></p>
+                    <p style="margin-top: 20px; opacity: 0.8;">
+                        شركاؤنا: <a href="https://www.facebook.com/profile.php?id=61588618584944" target="_blank" style="text-decoration: none; color: inherit;">📢 التسويق</a> | <a href="https://www.facebook.com/y0oussefgadallah" target="_blank" style="text-decoration: none; color: inherit;">📸 Youssef Gadallah</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
